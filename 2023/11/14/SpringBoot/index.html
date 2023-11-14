@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Spring Boot 实现 RESTful APISpringBoot 提供的spring-boot-starter-web组件完全支持开发RESTful API, 提供了与REST操作方式(GET POST PUT DELETE)对应的注解。 @GetMapping：处理GET请求，获取资源。 @PostMapping: 处理POST请求，新增资源。 @PutMapping:处理PUT请求，更">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://roath-c.github.io.git/2023/11/14/SpringBoot/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Spring Boot 实现 RESTful APISpringBoot 提供的spring-boot-starter-web组件完全支持开发RESTful API, 提供了与REST操作方式(GET POST PUT DELETE)对应的注解。 @GetMapping：处理GET请求，获取资源。 @PostMapping: 处理POST请求，新增资源。 @PutMapping:处理PUT请求，更">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T06:38:41.025Z">
+<meta property="article:modified_time" content="2023-10-03T13:06:46.000Z">
+<meta property="article:author" content="RoATH">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://RoATH-C.github.io.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-SpringBoot" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/SpringBoot/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T06:38:41.025Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Spring-Boot-实现-RESTful-API"><a href="#Spring-Boot-实现-RESTful-API" class="headerlink" title="Spring Boot 实现 RESTful API"></a>Spring Boot 实现 RESTful API</h1><p>SpringBoot 提供的spring-boot-starter-web组件完全支持开发RESTful API,</p>
+<p>提供了与REST操作方式(GET POST PUT DELETE)对应的注解。</p>
+<p>@GetMapping：处理GET请求，获取资源。</p>
+<p>@PostMapping: 处理POST请求，新增资源。</p>
+<p>@PutMapping:处理PUT请求，更新资源。</p>
+<p>@DeleteMapping：处理DELETE请求，删除资源。</p>
+<p>@PatchMapping：处理PATCH请求，用于部分更新资源.</p>
+<h1 id="Interceptor-拦截器"><a href="#Interceptor-拦截器" class="headerlink" title="Interceptor 拦截器"></a>Interceptor 拦截器</h1><p>拦截器要在Config里面先新增拦截器</p>
+<h1 id="Http-协议"><a href="#Http-协议" class="headerlink" title="Http 协议"></a>Http 协议</h1><p>请求协议 响应协议 协议解析</p>
+<p>特点：1.基于TCP协议 面向连接 安全</p>
+<p>​	2.基于请求-响应模型的 一次请求对应一次响应</p>
+<p>​	3.HTTP协议是无状态的协议 对于事务处理没有记忆能力 每次请求响应都是独立的</p>
+<p>​	缺点：多次请求间不能共享数据</p>
+<p>​	优点：速度快</p>
+<h1 id="学会封装"><a href="#学会封装" class="headerlink" title="学会封装"></a>学会封装</h1><h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><p>增删改的返回值为影响的数据为几条 #{} 如果只有一个普通类型的数据 {}里面随便填写参数传递用# </p>
+<p>·执行SQL时，会将#{…}替换成？，生成预编译SQL，会自动设置参数值</p>
+<p>·使用时机：参数传递，都是用#{}</p>
+<p>${}</p>
+<p>·拼接SQL，直接将参数拼接在SQL语句中，存在SQL注入问题。</p>
+<p>·使用时机：如果对表名，列表进行动态设置时使用</p>
+<h1 id="新增（主键返回）"><a href="#新增（主键返回）" class="headerlink" title="新增（主键返回）"></a>新增（主键返回）</h1><p>描述:在数据添加成功后，需要获取插入数据库数据的主键。</p>
+<p>如：添加套餐数据时，还需要维护套餐菜品关系表数据.</p>
+<p>@Option(KeyProperty&#x3D;”id”,use)</p>
+<p>如果数据库字段和代码中的成员变量不一致 可以手动 给字段起别名</p>
+<p>或者 手动用 Results或者 Result来手动映射封装</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Result(&#123;</span></span><br><span class="line"><span class="meta">	@Result(column=&#x27;数据库字段&#x27;,property=&#x27;成员变量&#x27;)</span></span><br><span class="line"><span class="meta">&#125;)</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2023/11/14/SpringBoot/" data-id="cloxys6kc0002skcnh0eh7193" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/SQL/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/09/25/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">My New Post</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/Vue/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SQL/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SpringBoot/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/25/My-New-Post/">My New Post</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 RoATH<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

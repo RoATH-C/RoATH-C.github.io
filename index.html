@@ -73,6 +73,274 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux 系统管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T06:38:41.046Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux-系统管理"><a href="#Linux-系统管理" class="headerlink" title="Linux 系统管理"></a>Linux 系统管理</h1><h2 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a><em><strong>第一节</strong></em></h2><p>echo $SHELL  查看SHELL变量的值 exit和Ctrl+D 可以返回原来的SHELL 环境  chsh</p>
+<p>echo $PATH 查看环境变量</p>
+<p>type命令  </p>
+<p><strong>builtin 内建命令，shell内建命令</strong></p>
+<p><strong>alias 别名</strong></p>
+<p><strong>file 文件，磁盘文件，外部命令</strong></p>
+<p><strong>keyword 关键字，shell保留字</strong></p>
+<p><strong>function 函数，shell函数</strong></p>
+<p><strong>unfound</strong> <strong>没有找到</strong></p>
+<p>“-” 引导短格式选项（单个字符） 例如 -l</p>
+<p>“–”引导长格式选项（多个字符） 例如 –color</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/" data-id="cloxys6k60000skcn1t6g1rt3" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Vue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/Vue/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T06:38:41.042Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><p>列表渲染 V-for 需要 绑定：key </p>
+<p>事件处理</p>
+<h2 id="组件v-model"><a href="#组件v-model" class="headerlink" title="组件v-model"></a>组件v-model</h2><p>可以在组件上使用以实现双向绑定</p>
+<script> export default {   props: ['title'],   emits: ['update:title'] } </script>  <template>   <input     type="text"     :value="title"     @input="$emit('update:title', $event.target.value)"   /> </template>
+
+<p>写一个名字为 update:title的function 然后prop为父组件的名字 然后 更新title属性</p>
+<h3 id="数组事件监听"><a href="#数组事件监听" class="headerlink" title="数组事件监听"></a>数组事件监听</h3><template>
+    <button @click="addListHandle">
+        添加数据
+    </button>
+    <ul>
+        <li v-for="(item,index) in names" :key="index">
+            
+        </li>
+    </ul>
+</template>
+<script>
+    export default{
+        data(){
+            return {
+                names:["iwen","ime","frank"],
+            }
+        }
+        addListHandle(){
+            this.name.push("sukura")
+        }
+    }
+</script>
+
+
+
+<h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><p>computed  与 methods区别  </p>
+<p>计算属性缓存</p>
+<p>重点区别：</p>
+<p>计算属性：计算属性值会基于其响应式依赖被缓存 一个计算属性仅会在其响应式以来更新时才重新计算</p>
+<p>方法：方法调用总是会在重渲染发生时再次执行函数</p>
+<h2 id="Class-样式绑定"><a href="#Class-样式绑定" class="headerlink" title="Class 样式绑定"></a>Class 样式绑定</h2><template>
+    <p :class="{'active':isActive,'text-danger':hasError}">
+        Class样式绑定
+    </p>
+    <p :class="classObject">
+        Class样式绑定2
+    </p>
+     <p :class="[arrActive,arrHasError]">
+        Class样式绑定3
+    </p>
+</template>
+<script>
+    export default{
+        data(){
+            return{
+                isActive:true,
+                hasError:true,
+                classObject:{
+                    'active':true,
+                    'text-danger':true
+                },
+                arrActive:"active",
+                arrHasError:"text-danger"
+            }
+        }
+    }
+</script>
+
+
+
+
+<h2 id="v-bind-指令"><a href="#v-bind-指令" class="headerlink" title="v-bind : 指令"></a>v-bind : 指令</h2><h2 id="v-on-click-在vue操作dom-模板引用"><a href="#v-on-click-在vue操作dom-模板引用" class="headerlink" title="v-on: click  在vue操作dom 模板引用"></a>v-on: click  在vue操作dom 模板引用</h2><p>DOM</p>
+<p>ref&#x3D;“name”  在method this.$refs. 获取次节点</p>
+<h2 id="组件传递Props校验"><a href="#组件传递Props校验" class="headerlink" title="组件传递Props校验"></a>组件传递Props校验</h2><p>props  传递数据，只能从父级传给子级  组件传递Props  type为返回类型 default可以设置默认值 可以default() {return}也可以 default   require 为必选项 如果为true则为必选项</p>
+<h2 id="组件事件"><a href="#组件事件" class="headerlink" title="组件事件"></a>组件事件</h2><p>this.$emit(“someEvent”) 在父组件里要当成事件来处理 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">method:&#123;</span><br><span class="line">	clickHandle()&#123;</span><br><span class="line">		this.$emit(&quot;someEvent&quot;,&quot;触发了事件&quot;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">父组件</span><br><span class="line">&lt;Child @someEvent=&quot;getHanlde&quot;/&gt;</span><br><span class="line">data()&#123;</span><br><span class="line">	return&#123;</span><br><span class="line">		data:data,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">methods:&#123;</span><br><span class="line">	getHandle(data)&#123;</span><br><span class="line">		log(&quot;触犯时间&quot;);</span><br><span class="line">		this.data</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Mounted-周期函数"><a href="#Mounted-周期函数" class="headerlink" title="Mounted   周期函数"></a>Mounted   周期函数</h1><p>被挂载时候调用 </p>
+<h1 id="Created-被创建时候调用-周期函数"><a href="#Created-被创建时候调用-周期函数" class="headerlink" title="Created 被创建时候调用 周期函数"></a>Created 被创建时候调用 周期函数</h1><h1 id="Computed-计算属性"><a href="#Computed-计算属性" class="headerlink" title="Computed 计算属性"></a>Computed 计算属性</h1><p>可用来写Getter Setter </p>
+<p>计算属性一般没有Set 那就是一个只读的属性</p>
+<h1 id="Watch-属性"><a href="#Watch-属性" class="headerlink" title="Watch 属性"></a>Watch 属性</h1><p>用Watch 才需要 同时写Set Get方法</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2023/11/14/Vue/" data-id="cloxys6kc0003skcng2snhvjh" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-SQL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/SQL/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T06:38:41.029Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="查询部分"><a href="#查询部分" class="headerlink" title="查询部分"></a><strong>查询部分</strong></h2><p>SHOW DATABASES; </p>
+<h3 id="SELECT-字段-FROM-表-WHERE-过滤条件"><a href="#SELECT-字段-FROM-表-WHERE-过滤条件" class="headerlink" title="SELECT  字段 FROM 表 WHERE 过滤条件;"></a>SELECT  字段 FROM 表 WHERE 过滤条件;</h3><h3 id="显示表结构"><a href="#显示表结构" class="headerlink" title="显示表结构"></a>显示表结构</h3><p>DESCRIBE TABLE   DESC TABLE   \</p>
+<p>Field：表示字段名称。 Type：表示字段类型，这里 barcode、goodsname 是文本型的，price 是整数类型的。 Null：表示该列是否可以存储NULL值。 Key：表示该列是否已编制索引。PRI表示该列是表主键的一部分；UNI表示该列是UNIQUE索引的一 部分；MUL表示在列中某个给定值允许出现多次。 Default：表示该列是否有默认值，如果有，那么值是多少。 Extra：表示可以获取的与给定列有关的附加信息，例如AUTO_INCREMENT等。</p>
+<h1 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h1><p>mysql&gt; </p>
+<p>SELECT 100, 100 + 0, 100 - 0, 100 + 50, 100 + 50 -30, 100 + 35.5, 100 - 35.5 FROM dual; +—–+———+———+———-+————–+————+————+ | 100 | 100 + 0 | 100 - 0 | 100 + 50 | 100 + 50 -30 | 100 + 35.5 | 100 - 35.5 | +—–+———+———+———-+————–+————+————+ | 100 | 100 | 100 | 150 | 120 | 135.5 | 64.5 | +—–+———+———+———-+————–+————+————+</p>
+<h2 id="SQL的比较是单"><a href="#SQL的比较是单" class="headerlink" title="SQL的比较是单&#x3D;"></a>SQL的比较是单&#x3D;</h2><p>IN运算符 IN运算符用于判断给定的值是否是IN列表中的一个值，如果是则返回1，否则返回0。如果给 定的值为NULL，或者IN列表中存在NULL，则结果为NULL。</p>
+<ol start="10">
+<li></li>
+</ol>
+<p>NOT IN运算符 NOT IN运算符用于判断给定的值是否不是IN列表中的一个值，如果不是IN列表中的一 个值，则返回1，否则返回0。</p>
+<ol start="11">
+<li></li>
+</ol>
+<p>LIKE运算符 LIKE运算符主要用来匹配字符串，通常用于模糊匹配，如果满足条件则返回1，否则返回 0。如果给定的值或者匹配条件为NULL，则返回结果为NULL。</p>
+<p>REGEXP运算符用来匹配字符串，语法格式为： expr REGEXP 匹配条件 。如果expr满足匹配条件，返回</p>
+<p>（1）‘^’匹配以该字符后面的字符开头的字符串。 </p>
+<p>（2）‘$’匹配以该字符前面的字符结尾的字符串。 </p>
+<p>（3）‘.’匹配任何一个单字符。 （</p>
+<p>4）“[…]”匹配在方括号内的任何字符。例如，“[abc]”匹配“a”或“b”或“c”。为了命名字符的范围，使用一 个‘-’。“[a-z]”匹配任何字母，而“[0-9]”匹配任何数字。 </p>
+<p>（5）‘<em>’匹配零个或多个在它前面的字符。例如，“x</em>”匹配任何数量的‘x’字符，“[0-9]<em>”匹配任何数量的数字， 而“</em>”匹配任何数量的任何字符。</p>
+<hr>
+<p><img src="C:\Users\iRouS\AppData\Roaming\Typora\typora-user-images\image-20230905162459170.png" alt="image-20230905162459170"></p>
+<h2 id="1-1-排序规则"><a href="#1-1-排序规则" class="headerlink" title="1.1 排序规则"></a>1.1 排序规则</h2><p>​	·ASC 升序</p>
+<p>​	· DESC 降序</p>
+<p>​	· ORDER BY 子句在SELECT语句的结尾</p>
+<p>单列排序和多列排序 在ORDER BY 后面添加列然后加上ASC or DESC</p>
+<h1 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h1><p>INSERT INTO TABLE</p>
+<p>VALUES (),(),();  多条插入比单行插入效率更高</p>
+<p>INSERT还可以将SELECT语句查询的结果插入到表中，此时不需要把每一条记录的值一个一个输入，只需 要使用一条INSERT语句和一条SELECT语句组成的组合语句即可快速地从一个或多个表中向一个表中插入 多行。 基本语法格式如下： 在 INSERT 语句中加入子查询。 不必书写 VALUES 子句。 子查询中的值列表应与 INSERT 子句中的列名对应。 举例： 2. 更新数据 使用 UPDATE 语句更新数据。语法如下： INSERT INTO 目标表名 (tar_column1 [, tar_column2, …, tar_columnn]) SELECT (src_column1 [, src_column2, …, src_columnn]) </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FROM 源表名 [WHERE condition]</span><br><span class="line"></span><br><span class="line"> INSERT INTO emp2 SELECT * </span><br><span class="line"></span><br><span class="line">FROM employees </span><br><span class="line"></span><br><span class="line">WHERE department_id = 90; </span><br><span class="line"></span><br><span class="line">INSERT INTO sales_reps(id, name, salary, commission_pct)</span><br><span class="line"></span><br><span class="line"> SELECT employee_id, last_name, salary, commission_pct</span><br><span class="line"></span><br><span class="line"> FROM employees </span><br><span class="line"></span><br><span class="line">WHERE job_id LIKE &#x27;%REP%&#x27;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h1><p>举例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">`UPDATE employees` </span><br><span class="line"></span><br><span class="line">`SET department_id = 70` </span><br><span class="line"></span><br><span class="line">`WHERE employee_id = 113;`</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Limit</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2023/11/14/SQL/" data-id="cloxys6kb0001skcn2dia34wi" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-SpringBoot" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/SpringBoot/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T06:38:41.025Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Spring-Boot-实现-RESTful-API"><a href="#Spring-Boot-实现-RESTful-API" class="headerlink" title="Spring Boot 实现 RESTful API"></a>Spring Boot 实现 RESTful API</h1><p>SpringBoot 提供的spring-boot-starter-web组件完全支持开发RESTful API,</p>
+<p>提供了与REST操作方式(GET POST PUT DELETE)对应的注解。</p>
+<p>@GetMapping：处理GET请求，获取资源。</p>
+<p>@PostMapping: 处理POST请求，新增资源。</p>
+<p>@PutMapping:处理PUT请求，更新资源。</p>
+<p>@DeleteMapping：处理DELETE请求，删除资源。</p>
+<p>@PatchMapping：处理PATCH请求，用于部分更新资源.</p>
+<h1 id="Interceptor-拦截器"><a href="#Interceptor-拦截器" class="headerlink" title="Interceptor 拦截器"></a>Interceptor 拦截器</h1><p>拦截器要在Config里面先新增拦截器</p>
+<h1 id="Http-协议"><a href="#Http-协议" class="headerlink" title="Http 协议"></a>Http 协议</h1><p>请求协议 响应协议 协议解析</p>
+<p>特点：1.基于TCP协议 面向连接 安全</p>
+<p>​	2.基于请求-响应模型的 一次请求对应一次响应</p>
+<p>​	3.HTTP协议是无状态的协议 对于事务处理没有记忆能力 每次请求响应都是独立的</p>
+<p>​	缺点：多次请求间不能共享数据</p>
+<p>​	优点：速度快</p>
+<h1 id="学会封装"><a href="#学会封装" class="headerlink" title="学会封装"></a>学会封装</h1><h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><p>增删改的返回值为影响的数据为几条 #{} 如果只有一个普通类型的数据 {}里面随便填写参数传递用# </p>
+<p>·执行SQL时，会将#{…}替换成？，生成预编译SQL，会自动设置参数值</p>
+<p>·使用时机：参数传递，都是用#{}</p>
+<p>${}</p>
+<p>·拼接SQL，直接将参数拼接在SQL语句中，存在SQL注入问题。</p>
+<p>·使用时机：如果对表名，列表进行动态设置时使用</p>
+<h1 id="新增（主键返回）"><a href="#新增（主键返回）" class="headerlink" title="新增（主键返回）"></a>新增（主键返回）</h1><p>描述:在数据添加成功后，需要获取插入数据库数据的主键。</p>
+<p>如：添加套餐数据时，还需要维护套餐菜品关系表数据.</p>
+<p>@Option(KeyProperty&#x3D;”id”,use)</p>
+<p>如果数据库字段和代码中的成员变量不一致 可以手动 给字段起别名</p>
+<p>或者 手动用 Results或者 Result来手动映射封装</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Result(&#123;</span></span><br><span class="line"><span class="meta">	@Result(column=&#x27;数据库字段&#x27;,property=&#x27;成员变量&#x27;)</span></span><br><span class="line"><span class="meta">&#125;)</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2023/11/14/SpringBoot/" data-id="cloxys6kc0002skcnh0eh7193" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-My-New-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/09/25/My-New-Post/" class="article-date">
@@ -180,7 +448,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
     </div>
   </div>
 
@@ -193,11 +461,23 @@
       <ul>
         
           <li>
-            <a href="/2023/09/25/My-New-Post/">My New Post</a>
+            <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/09/25/hello-world/">Hello World</a>
+            <a href="/2023/11/14/Vue/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SQL/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SpringBoot/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/25/My-New-Post/">My New Post</a>
           </li>
         
       </ul>

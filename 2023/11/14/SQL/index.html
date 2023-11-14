@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="SQL查询部分SHOW DATABASES;  SELECT  字段 FROM 表 WHERE 过滤条件;显示表结构DESCRIBE TABLE   DESC TABLE   \ Field：表示字段名称。 Type：表示字段类型，这里 barcode、goodsname 是文本型的，price 是整数类型的。 Null：表示该列是否可以存储NULL值。 Key：表示该列是否已编制索引。PRI表示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://roath-c.github.io.git/2023/11/14/SQL/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="SQL查询部分SHOW DATABASES;  SELECT  字段 FROM 表 WHERE 过滤条件;显示表结构DESCRIBE TABLE   DESC TABLE   \ Field：表示字段名称。 Type：表示字段类型，这里 barcode、goodsname 是文本型的，price 是整数类型的。 Null：表示该列是否可以存储NULL值。 Key：表示该列是否已编制索引。PRI表示">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\iRouS\AppData\Roaming\Typora\typora-user-images\image-20230905162459170.png">
+<meta property="article:published_time" content="2023-11-14T06:38:41.029Z">
+<meta property="article:modified_time" content="2023-09-09T05:27:00.000Z">
+<meta property="article:author" content="RoATH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\iRouS\AppData\Roaming\Typora\typora-user-images\image-20230905162459170.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://RoATH-C.github.io.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-SQL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/SQL/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T06:38:41.029Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="查询部分"><a href="#查询部分" class="headerlink" title="查询部分"></a><strong>查询部分</strong></h2><p>SHOW DATABASES; </p>
+<h3 id="SELECT-字段-FROM-表-WHERE-过滤条件"><a href="#SELECT-字段-FROM-表-WHERE-过滤条件" class="headerlink" title="SELECT  字段 FROM 表 WHERE 过滤条件;"></a>SELECT  字段 FROM 表 WHERE 过滤条件;</h3><h3 id="显示表结构"><a href="#显示表结构" class="headerlink" title="显示表结构"></a>显示表结构</h3><p>DESCRIBE TABLE   DESC TABLE   \</p>
+<p>Field：表示字段名称。 Type：表示字段类型，这里 barcode、goodsname 是文本型的，price 是整数类型的。 Null：表示该列是否可以存储NULL值。 Key：表示该列是否已编制索引。PRI表示该列是表主键的一部分；UNI表示该列是UNIQUE索引的一 部分；MUL表示在列中某个给定值允许出现多次。 Default：表示该列是否有默认值，如果有，那么值是多少。 Extra：表示可以获取的与给定列有关的附加信息，例如AUTO_INCREMENT等。</p>
+<h1 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h1><p>mysql&gt; </p>
+<p>SELECT 100, 100 + 0, 100 - 0, 100 + 50, 100 + 50 -30, 100 + 35.5, 100 - 35.5 FROM dual; +—–+———+———+———-+————–+————+————+ | 100 | 100 + 0 | 100 - 0 | 100 + 50 | 100 + 50 -30 | 100 + 35.5 | 100 - 35.5 | +—–+———+———+———-+————–+————+————+ | 100 | 100 | 100 | 150 | 120 | 135.5 | 64.5 | +—–+———+———+———-+————–+————+————+</p>
+<h2 id="SQL的比较是单"><a href="#SQL的比较是单" class="headerlink" title="SQL的比较是单&#x3D;"></a>SQL的比较是单&#x3D;</h2><p>IN运算符 IN运算符用于判断给定的值是否是IN列表中的一个值，如果是则返回1，否则返回0。如果给 定的值为NULL，或者IN列表中存在NULL，则结果为NULL。</p>
+<ol start="10">
+<li></li>
+</ol>
+<p>NOT IN运算符 NOT IN运算符用于判断给定的值是否不是IN列表中的一个值，如果不是IN列表中的一 个值，则返回1，否则返回0。</p>
+<ol start="11">
+<li></li>
+</ol>
+<p>LIKE运算符 LIKE运算符主要用来匹配字符串，通常用于模糊匹配，如果满足条件则返回1，否则返回 0。如果给定的值或者匹配条件为NULL，则返回结果为NULL。</p>
+<p>REGEXP运算符用来匹配字符串，语法格式为： expr REGEXP 匹配条件 。如果expr满足匹配条件，返回</p>
+<p>（1）‘^’匹配以该字符后面的字符开头的字符串。 </p>
+<p>（2）‘$’匹配以该字符前面的字符结尾的字符串。 </p>
+<p>（3）‘.’匹配任何一个单字符。 （</p>
+<p>4）“[…]”匹配在方括号内的任何字符。例如，“[abc]”匹配“a”或“b”或“c”。为了命名字符的范围，使用一 个‘-’。“[a-z]”匹配任何字母，而“[0-9]”匹配任何数字。 </p>
+<p>（5）‘<em>’匹配零个或多个在它前面的字符。例如，“x</em>”匹配任何数量的‘x’字符，“[0-9]<em>”匹配任何数量的数字， 而“</em>”匹配任何数量的任何字符。</p>
+<hr>
+<p><img src="C:\Users\iRouS\AppData\Roaming\Typora\typora-user-images\image-20230905162459170.png" alt="image-20230905162459170"></p>
+<h2 id="1-1-排序规则"><a href="#1-1-排序规则" class="headerlink" title="1.1 排序规则"></a>1.1 排序规则</h2><p>​	·ASC 升序</p>
+<p>​	· DESC 降序</p>
+<p>​	· ORDER BY 子句在SELECT语句的结尾</p>
+<p>单列排序和多列排序 在ORDER BY 后面添加列然后加上ASC or DESC</p>
+<h1 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h1><p>INSERT INTO TABLE</p>
+<p>VALUES (),(),();  多条插入比单行插入效率更高</p>
+<p>INSERT还可以将SELECT语句查询的结果插入到表中，此时不需要把每一条记录的值一个一个输入，只需 要使用一条INSERT语句和一条SELECT语句组成的组合语句即可快速地从一个或多个表中向一个表中插入 多行。 基本语法格式如下： 在 INSERT 语句中加入子查询。 不必书写 VALUES 子句。 子查询中的值列表应与 INSERT 子句中的列名对应。 举例： 2. 更新数据 使用 UPDATE 语句更新数据。语法如下： INSERT INTO 目标表名 (tar_column1 [, tar_column2, …, tar_columnn]) SELECT (src_column1 [, src_column2, …, src_columnn]) </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FROM 源表名 [WHERE condition]</span><br><span class="line"></span><br><span class="line"> INSERT INTO emp2 SELECT * </span><br><span class="line"></span><br><span class="line">FROM employees </span><br><span class="line"></span><br><span class="line">WHERE department_id = 90; </span><br><span class="line"></span><br><span class="line">INSERT INTO sales_reps(id, name, salary, commission_pct)</span><br><span class="line"></span><br><span class="line"> SELECT employee_id, last_name, salary, commission_pct</span><br><span class="line"></span><br><span class="line"> FROM employees </span><br><span class="line"></span><br><span class="line">WHERE job_id LIKE &#x27;%REP%&#x27;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h1><p>举例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">`UPDATE employees` </span><br><span class="line"></span><br><span class="line">`SET department_id = 70` </span><br><span class="line"></span><br><span class="line">`WHERE employee_id = 113;`</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Limit</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2023/11/14/SQL/" data-id="cloxys6kb0001skcn2dia34wi" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/Vue/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/SpringBoot/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/Vue/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SQL/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SpringBoot/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/09/25/My-New-Post/">My New Post</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 RoATH<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
