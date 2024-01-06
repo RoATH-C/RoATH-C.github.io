@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Linux系统管理复习 | RoATH的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Linux系统管理1.Vi 编译器:wq 保存退出 :q 退出 :set nu 显示行号 :set nonu 不显示行号 yy复制 p输入  5yy 复制五行 2.关机重启·基本介绍​		shutdown -h now 立刻进行关机 ​		shutdown -h 1 一分钟之后关机 ​		shutdown -r now 现在重启计算机 ​		halt 同上 ​		reboot 现在重启计算机 ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统管理复习">
+<meta property="og:url" content="https://roath-c.github.io.git/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="RoATH的个人博客">
+<meta property="og:description" content="Linux系统管理1.Vi 编译器:wq 保存退出 :q 退出 :set nu 显示行号 :set nonu 不显示行号 yy复制 p输入  5yy 复制五行 2.关机重启·基本介绍​		shutdown -h now 立刻进行关机 ​		shutdown -h 1 一分钟之后关机 ​		shutdown -r now 现在重启计算机 ​		halt 同上 ​		reboot 现在重启计算机 ​">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-01-06T13:46:20.000Z">
+<meta property="article:modified_time" content="2024-01-06T13:46:49.391Z">
+<meta property="article:author" content="RoATH">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="RoATH的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">RoATH的个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://RoATH-C.github.io.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Linux系统管理复习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2024-01-06T13:46:20.000Z" itemprop="datePublished">2024-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Linux系统管理复习
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux系统管理"><a href="#Linux系统管理" class="headerlink" title="Linux系统管理"></a>Linux系统管理</h1><h2 id="1-Vi-编译器"><a href="#1-Vi-编译器" class="headerlink" title="1.Vi 编译器"></a>1.Vi 编译器</h2><p>:wq 保存退出 :q 退出 :set nu 显示行号 :set nonu 不显示行号 yy复制 p输入  5yy 复制五行</p>
+<h2 id="2-关机重启"><a href="#2-关机重启" class="headerlink" title="2.关机重启"></a>2.关机重启</h2><h3 id="·基本介绍"><a href="#·基本介绍" class="headerlink" title="·基本介绍"></a>·基本介绍</h3><p>​		shutdown -h now 立刻进行关机</p>
+<p>​		shutdown -h 1 一分钟之后关机</p>
+<p>​		shutdown -r now 现在重启计算机</p>
+<p>​		halt 同上</p>
+<p>​		reboot 现在重启计算机</p>
+<p>​		sync 把内存的数据同步到磁盘</p>
+<h3 id="·注意细节"><a href="#·注意细节" class="headerlink" title="·注意细节"></a>·注意细节</h3><p>​		1.不管是重启还是关闭系统，首先要执行sync命令。</p>
+<p>​		2.目前的shutdown halt reboot 都已经执行了sync命令</p>
+<h2 id="3-用户登录和注销"><a href="#3-用户登录和注销" class="headerlink" title="3.用户登录和注销"></a>3.用户登录和注销</h2><ul>
+<li><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3></li>
+</ul>
+<p>​	   	1.尽量少用root用户登</p>
+<p>​			logout 是注销用户</p>
+<ul>
+<li>温馨提示</li>
+</ul>
+<p>​		1.在图形运行级别无效，在运行级别3下有效</p>
+<h2 id="4-用户管理"><a href="#4-用户管理" class="headerlink" title="4.用户管理"></a>4.用户管理</h2><h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><ul>
+<li><p>基本语法</p>
+<p>​	useradd</p>
+<p>passwd 用户名–指定&#x2F;修改密码   pwd当前用户所在的目录</p>
+</li>
+</ul>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h3><p>​	介绍：系统可以对有共性&#x2F;权限的多个用户进行统一的管理.</p>
+<p>​	新增组：groupadd 组名</p>
+<p>​	删除组：groupdel 组名</p>
+<p>​	增加用户时直接加上组： useradd -g 用户组 用户名 </p>
+<p>​	修改用户的组：usermod -g 用户组 用户名</p>
+<h3 id="etc-passwd-文件"><a href="#etc-passwd-文件" class="headerlink" title="&#x2F;etc&#x2F;passwd 文件"></a>&#x2F;etc&#x2F;passwd 文件</h3><p>​	用户的配置文件，记录用户的各种信息</p>
+<p>​	每行的含义：用户名：口令：用户标识号：组标识号：注释性描述：主目录：登录SHELL</p>
+<h3 id="etc-shadow文件"><a href="#etc-shadow文件" class="headerlink" title="&#x2F;etc&#x2F;shadow文件"></a>&#x2F;etc&#x2F;shadow文件</h3><p>​	口令的配置文件</p>
+<p>​	每行的含义：登录名：加密口令：最后一次修改时间：最小的时间间隔：最大的时间间隔：警告时间：不活动时间：失效时间：标志</p>
+<h3 id="etc-group文件"><a href="#etc-group文件" class="headerlink" title="&#x2F;etc&#x2F;group文件"></a>&#x2F;etc&#x2F;group文件</h3><p>​	组的配置文件，记录Linux包含的组的信息</p>
+<p>​	每行含义：组名：口令：组标识号：组内的用户列表</p>
+<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p>​	passwd 用户名</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>​	userdel 用户名</p>
+<p>​		保留家目录 userdel 用户名</p>
+<p>​		删除用户以及用户主目录 userdel -r 用户名</p>
+<h3 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h3><p>​	su 用户名</p>
+<h3 id="查看当前用户"><a href="#查看当前用户" class="headerlink" title="查看当前用户"></a>查看当前用户</h3><p>​	who am i  &#x2F;whoai</p>
+<h2 id="5-运行级别"><a href="#5-运行级别" class="headerlink" title="5.运行级别"></a>5.运行级别</h2><p>​	0：关机</p>
+<p>​	1：单用户（找回丢失密码）</p>
+<p>​	2：多用户状态没有网络服务</p>
+<p>​	3：多用户状态有网络服务</p>
+<p>​	4：系统未使用保留给用户</p>
+<p>​	5：图形界面</p>
+<p>​	6：系统重启</p>
+<p>​	3 5 可以指定默认运行级别</p>
+<p>init [0-6] 应用案例 可以切换不同的运行级别  systenctl get-default 查看当前运行级别</p>
+<p>systemctl set-default TARGET.target</p>
+<h2 id="6-找回Root密码"><a href="#6-找回Root密码" class="headerlink" title="6.找回Root密码"></a>6.找回Root密码</h2><p>​	在界面按e 或者设置运行级别为3</p>
+<h2 id="7-帮助指令"><a href="#7-帮助指令" class="headerlink" title="7.帮助指令"></a>7.帮助指令</h2><p>​	man [命令或配置文件] (获取帮助信息)</p>
+<p>​	q 退出 j下滚一行f下滚一页</p>
+<p>​	Example:man ls</p>
+<p>​	help 命令 (获取Shell 内置命令的帮助信息)</p>
+<h2 id="8-文件目录管理"><a href="#8-文件目录管理" class="headerlink" title="8.文件目录管理"></a>8.文件目录管理</h2><h3 id="pwd-指令"><a href="#pwd-指令" class="headerlink" title="pwd 指令"></a>pwd 指令</h3><p>​	显示当前工作目录的绝对路径</p>
+<p>​	ls [选项] 文件</p>
+<p>​	-a 显示当前目录所有的文件和目录 包括隐藏的</p>
+<p>​	-l 列表方式显示信息</p>
+<h3 id="cd指令"><a href="#cd指令" class="headerlink" title="cd指令"></a>cd指令</h3><p>​		cd ~ &#x2F; cd 回到家目录</p>
+<p>​		cd ..回到上一级目录</p>
+<h3 id="mkdir指令"><a href="#mkdir指令" class="headerlink" title="mkdir指令"></a>mkdir指令</h3><p>​		用于创建目录</p>
+<p>​		mkdir -p 创建多级目录</p>
+<h3 id="rmdir指令"><a href="#rmdir指令" class="headerlink" title="rmdir指令"></a>rmdir指令</h3><p>​		删除空目录 空目录占用磁盘空间 用rmdir删除空目录节省时间</p>
+<p>​	rm -rf 删除非空目录</p>
+<h3 id="touch指令"><a href="#touch指令" class="headerlink" title="touch指令"></a>touch指令</h3><p>​		创建空文件并修改时间</p>
+<h3 id="cp指令"><a href="#cp指令" class="headerlink" title="cp指令"></a>cp指令</h3><p>​	 	拷贝文件到指定目录</p>
+<p>​		cp -r 递归复制整个文件夹</p>
+<p>​		cp -rf 强制删除不提示</p>
+<h3 id="mv指令"><a href="#mv指令" class="headerlink" title="mv指令"></a>mv指令</h3><p>​		mv 文件 文件</p>
+<h3 id="cat指令"><a href="#cat指令" class="headerlink" title="cat指令"></a>cat指令</h3><p>​		查看文件 cat-n显示行号</p>
+<p>​		cat只能浏览文件不能修改文件 为了方便浏览 加入 cat 文件|more</p>
+<h3 id="echo指令"><a href="#echo指令" class="headerlink" title="echo指令"></a>echo指令</h3><p>​		输出内容到控制台</p>
+<h3 id="head指令"><a href="#head指令" class="headerlink" title="head指令"></a>head指令</h3><p>​		用于显示文件开的部分内容 默认为十行</p>
+<p>​		head -n 5 文件</p>
+<h3 id="tail指令"><a href="#tail指令" class="headerlink" title="tail指令"></a>tail指令</h3><p>​		输出文件中尾部的内容 默认情况为10行</p>
+<p>​		tail -n 5 文件</p>
+<p>​		tail -f 文件 实时追踪文档的所有更新</p>
+<h3 id="和-指令"><a href="#和-指令" class="headerlink" title="&gt;和&gt;&gt;指令"></a>&gt;和&gt;&gt;指令</h3><p>​		&gt;输出重定向和&gt;&gt;追加</p>
+<p>​		如果没有此文件 则会创建一个新文件</p>
+<p>​		ls -l &gt;  文件  列表的内容写入文件中（覆盖）</p>
+<p>​		ls -la &gt;&gt; 追加文件最后面</p>
+<h3 id="ln-指令"><a href="#ln-指令" class="headerlink" title="ln 指令"></a>ln 指令</h3><p>​		软链接 称符号链接 类似于windows的快捷方式 存放链接其他文件的方式</p>
+<p>​		ln -s 原文件或目录 软连接名  为源文件创建一个软链接</p>
+<h3 id="history-指令"><a href="#history-指令" class="headerlink" title="history 指令"></a>history 指令</h3><p>​		查看已经执行过的历史命令，也可以执行历史指令</p>
+<h2 id="9-时间日期类"><a href="#9-时间日期类" class="headerlink" title="9.时间日期类"></a>9.时间日期类</h2><h3 id="date-指令-显示当前日期"><a href="#date-指令-显示当前日期" class="headerlink" title="date 指令 显示当前日期"></a>date 指令 显示当前日期</h3><p>​		date  </p>
+<p>​		date +%Y 显示当前年份</p>
+<p>​		date +%m 显示当前月份</p>
+<p>​		date +%d 显示当前是哪一天</p>
+<p>​		date +%Y-%m-%d %H:%M%:S 	显示年月日时分秒</p>
+<h3 id="cal"><a href="#cal" class="headerlink" title="cal"></a>cal</h3><p>​		查看日历</p>
+<h2 id="10-查找指令"><a href="#10-查找指令" class="headerlink" title="10.查找指令"></a>10.查找指令</h2><h3 id="find指令"><a href="#find指令" class="headerlink" title="find指令"></a>find指令</h3><p>​	递归地遍历其各个子目录，满足条件的显示在终端</p>
+<p>​	find -name 根据指定文件名查找文件</p>
+<p>​	find -user 查找属于指定用户所有文件</p>
+<p>​	find -size 按照指定的文件大小查找文件 	+200M 大于两百M  	- 200M 小于两百M 200M 等于200M </p>
+<h3 id="grep指令"><a href="#grep指令" class="headerlink" title="grep指令"></a>grep指令</h3><p>​		grep过滤查找 跟管道符号一起</p>
+<p>​		grep -n 显示匹配行及行号</p>
+<p>​		grep -i 忽略字母大小写</p>
+<p>​		grep -n “”  文件</p>
+<h2 id="11-压缩文件"><a href="#11-压缩文件" class="headerlink" title="11.压缩文件"></a>11.压缩文件</h2><p>​	gzip&#x2F;gunzip 指令</p>
+<p>​	gzip 解压缩文件</p>
+<p>​		</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://roath-c.github.io.git/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/" data-id="clr24zhhv0001f4cn686dfi24" data-title="Linux系统管理复习" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/">Linux系统管理复习</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/Vue/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SQL/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/SpringBoot/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 RoATH<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
