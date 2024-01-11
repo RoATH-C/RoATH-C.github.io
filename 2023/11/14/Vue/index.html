@@ -1,92 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>RoATH的个人博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Vue列表渲染 V-for 需要 绑定：key  事件处理 组件v-model可以在组件上使用以实现双向绑定  export default {   props: [&#39;title&#39;],   emits: [&#39;update:title&#39;] }         写一个名字为 update:title的function 然后prop为父组件的名字 然后 更新title属性 数组事件监听">
-<meta property="og:type" content="article">
-<meta property="og:title" content="RoATH的个人博客">
-<meta property="og:url" content="https://roath-c.github.io.git/2023/11/14/Vue/index.html">
-<meta property="og:site_name" content="RoATH的个人博客">
-<meta property="og:description" content="Vue列表渲染 V-for 需要 绑定：key  事件处理 组件v-model可以在组件上使用以实现双向绑定  export default {   props: [&#39;title&#39;],   emits: [&#39;update:title&#39;] }         写一个名字为 update:title的function 然后prop为父组件的名字 然后 更新title属性 数组事件监听">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-11-14T06:38:41.042Z">
-<meta property="article:modified_time" content="2023-10-26T04:13:42.000Z">
-<meta property="article:author" content="RoATH">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="RoATH的个人博客" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+    <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<title>RoATH的个人博客</title>
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div class="container">
+            <header>
+<div class="main">
+<div class="title">
+    <a href="#" class="logo">RoATH的个人博客</a>
+</div>
+<div class="site-nav">
+    <ul id="menu" class="menu">
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+        <li class="menu-item text-underline">
+            <a href="/">Home</a>
+        </li>
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">RoATH的个人博客</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://RoATH-C.github.io.git"></form>
-      </div>
-    </div>
-  </div>
+        <li class="menu-item text-underline">
+            <a href="/archives">Archives</a>
+        </li>
+    
+        <li class="menu-item text-underline">
+            <a href="/about/">About</a>
+        </li>
+            
+    </ul>
+</div>
+</div>
 </header>
-
-      <div class="outer">
-        <section id="main"><article id="post-Vue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/11/14/Vue/" class="article-date">
-  <time class="dt-published" datetime="2023-11-14T06:38:41.042Z" itemprop="datePublished">2023-11-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
+            <main class="main">
+                <section class="posts clearfix">
+<div class="post-wrapper">
+    <article class="post article-entry">
+    <div class="post-title">
+        
+    </div>
+    <p class="sub">Nov 14 2023</p>
+    <div class="post-content">
         <h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><p>列表渲染 V-for 需要 绑定：key </p>
 <p>事件处理</p>
 <h2 id="组件v-model"><a href="#组件v-model" class="headerlink" title="组件v-model"></a>组件v-model</h2><p>可以在组件上使用以实现双向绑定</p>
@@ -165,134 +125,106 @@
 <p>计算属性一般没有Set 那就是一个只读的属性</p>
 <h1 id="Watch-属性"><a href="#Watch-属性" class="headerlink" title="Watch 属性"></a>Watch 属性</h1><p>用Watch 才需要 同时写Set Get方法</p>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="https://roath-c.github.io.git/2023/11/14/Vue/" data-id="clr25b52d0006twcngbb98xrs" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2023/11/14/SQL/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
+    </article>
+</div>
 
-  
-</article>
-
+    <div class="_toc">
+        <strong class="toc-title">
+        Contents
+        </strong>
+        <div class="toc-content">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue"><span class="toc-text">Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6v-model"><span class="toc-text">组件v-model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC"><span class="toc-text">数组事件监听</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="toc-text">计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-%E6%A0%B7%E5%BC%8F%E7%BB%91%E5%AE%9A"><span class="toc-text">Class 样式绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-bind-%E6%8C%87%E4%BB%A4"><span class="toc-text">v-bind : 指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-on-click-%E5%9C%A8vue%E6%93%8D%E4%BD%9Cdom-%E6%A8%A1%E6%9D%BF%E5%BC%95%E7%94%A8"><span class="toc-text">v-on: click  在vue操作dom 模板引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92Props%E6%A0%A1%E9%AA%8C"><span class="toc-text">组件传递Props校验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E4%BA%8B%E4%BB%B6"><span class="toc-text">组件事件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mounted-%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-text">Mounted   周期函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Created-%E8%A2%AB%E5%88%9B%E5%BB%BA%E6%97%B6%E5%80%99%E8%B0%83%E7%94%A8-%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-text">Created 被创建时候调用 周期函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Computed-%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="toc-text">Computed 计算属性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Watch-%E5%B1%9E%E6%80%A7"><span class="toc-text">Watch 属性</span></a></li></ol>
+        </div>
+    </div>
 
 </section>
+
+
+    <nav class="post-nav">
         
-          <aside id="sidebar">
-  
-    
+            <div class="page-tags">
+                
+            </div>
+        
+    </nav>
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li></ul>
-    </div>
+
+    <nav class="paginator clearfix">
+        
+            <a class="prev" href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+                <i class="iconfont icon-left"></i>
+                <span class="prev-text"></span>
+            </a>
+        
+        
+            <a class="next" href="/2023/11/14/SQL/">
+                
+                <span class="prev-text"></span>
+                <i class="iconfont icon-right"></i>
+            </a>
+        
+    </nav>
+
+
+            </main>
+            <div class="copyright">
+  <div class="text">Powered By
+    <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/zjx137/hexo-theme-Tsu">Tsu</a> &copy 2019
   </div>
+</div>
 
-
-  
+        </div>
+    <div class="back-to-top" id="back-to-top">
+            <i class="iconfont icon-up"></i>
+    </div>
+        
+    </body>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/">Linux系统管理复习</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/14/Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/14/Vue/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/14/SQL/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/14/SpringBoot/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+<script src="/js/jquery-3.3.1.min.js"></script>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 RoATH<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
+<script src="/js/back-to-top.js"></script>
 
+    
+<script src="/js/scroll.js"></script>
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": { 
+        preferredFont: "TeX", 
+        availableFonts: ["STIX","TeX"], 
+        linebreaks: { automatic:true }, 
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) 
+    },
+    tex2jax: { 
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ], 
+        processEscapes: true, 
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {  
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+        Macros: { href: "{}" } 
+    },
+    messageStyle: "none"
+    }); 
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
 </html>
