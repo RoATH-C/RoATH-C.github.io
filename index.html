@@ -156,6 +156,283 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-【算法学习】排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/">【算法学习】排序</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2024-01-13T12:41:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="排序内容大总结"><a href="#排序内容大总结" class="headerlink" title="排序内容大总结"></a>排序内容大总结</h1><p>​	当然在学习之前，我们家进行了一次小聚餐，我聊了聊在学校的生活，并问到我是否和晶晶经常吃饭，以及爸爸妈妈给我说，哪张照片拍的好看，爸爸妈妈总是八卦晶晶的一些事，每每回答道，却总有些空落落，晶晶没有却没有和我一起吃饭，但今天也是再为之后的见面，积攒更深的思念吧。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>​	堆排序是由二叉树所成，排序之前调整为大根堆小根堆</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">heapInsert</span><span class="params">(<span class="type">int</span>[] arr,<span class="type">int</span> index)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(arr[inidex]&gt;arr[(index-<span class="number">1</span>)/<span class="number">2</span>])</span><br><span class="line">    &#123;</span><br><span class="line">        swap(arr,index,(index-<span class="number">1</span>)/<span class="number">2</span>);</span><br><span class="line">        index=(index-<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此代码段落是实现大根堆的代码。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">heapify</span><span class="params">(<span class="type">int</span>[] arr,<span class="type">int</span> index,<span class="type">int</span> heapSize)</span>&#123;</span><br><span class="line">    <span class="type">int</span> left=index*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;heapSize)&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">largest</span> <span class="operator">=</span> left+<span class="number">1</span>&lt;heapSize&amp;&amp;arr[left+<span class="number">1</span>]&gt;arr[left]?left+<span class="number">1</span>:left;</span><br><span class="line">        largest=arr[largest]&gt;arr[index]?largest:index;</span><br><span class="line">        <span class="keyword">if</span>(largest==index)&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr,largest,index);</span><br><span class="line">        index = largest;</span><br><span class="line">        left=index*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>堆排序： 建立一个大根堆，让下标为0的数与heapSize的数做交换。交换结束，如果下标为0则进行heapify操作。每次交换，heapSize–。代码如下：</p>
+<p>​	</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">heapSort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(arr==<span class="literal">null</span>||arr.length&lt;<span class="number">2</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//把数组内的数都变成大根堆</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        heapInsert(arr,i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> heapSize=arr.length;</span><br><span class="line">    swap(arr,<span class="number">0</span>,--heapSize);</span><br><span class="line">    <span class="keyword">while</span>(heapSize&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        heapify(arr,<span class="number">0</span>,headSize);</span><br><span class="line">        swap(arr,<span class="number">0</span>,--heapSize);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	小根堆在Java里默认为优先级队列，PriorityQueue即优先级队列，在new PriorityQueue 依次弹出数最小的数，每一次代价则是logN级别的时间复杂度。</p>
+<p>​	系统提供的堆结构，需要理解其中原理，必要情况需要自己写堆排序。 </p>
+<h2 id="比较器-Comparator"><a href="#比较器-Comparator" class="headerlink" title="比较器(Comparator)"></a>比较器(Comparator)</h2><p>​	潜台词：返回负数，第一个参数排前面，返回正数第二个参数排前面，返回零无所谓。在Array.sort(需要排序的数组，怎么排序的策略);</p>
+<p>​		</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【算法学习】链表，二叉树，哈希等" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E9%93%BE%E8%A1%A8%EF%BC%8C%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E5%93%88%E5%B8%8C%E7%AD%89/">【算法学习】链表，二叉树，哈希等</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E9%93%BE%E8%A1%A8%EF%BC%8C%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E5%93%88%E5%B8%8C%E7%AD%89/" class="archive-article-date">
+  	<time datetime="2024-01-13T12:39:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E9%93%BE%E8%A1%A8%EF%BC%8C%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E5%93%88%E5%B8%8C%E7%AD%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【后端学习】计算机网络基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/13/%E3%80%90%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">【后端学习】计算机网络基础</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/13/%E3%80%90%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2024-01-13T06:09:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="TCP和UDP是两个不同的传输层协议"><a href="#TCP和UDP是两个不同的传输层协议" class="headerlink" title="TCP和UDP是两个不同的传输层协议"></a>TCP和UDP是两个不同的传输层协议</h2><ul>
+<li>TCP：当一台计算机想要与另一台计算机通讯时，两台计算机之间的通信需要畅通且可靠（会进行三次握手，断开也会进行第四次挥手），这样才能保证正确收发数据，因此TCP更适合一些可靠的数据的传输场景。</li>
+<li>UDP：它是一种无连接协议，数据想发就发，而且不会建立可靠传输，也就是说传输过程中，有可能会导致部分数据丢失，TCP传输更加简单高效，适合视频直播之类的。</li>
+</ul>
+<h2 id="使用Socket进行数据传输"><a href="#使用Socket进行数据传输" class="headerlink" title="使用Socket进行数据传输"></a>使用Socket进行数据传输</h2><p>​	</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Socket(InetAddress address,<span class="type">int</span> port)</span><br><span class="line"><span class="comment">//创建流套接字并将其连接到指定IP地址的指定端口号</span></span><br><span class="line">getOutputStream()</span><br><span class="line"><span class="comment">//返回此套接字的输出流</span></span><br><span class="line">getInputStream()</span><br><span class="line"><span class="comment">//返回此套接字的输入流</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>​</li>
+</ul>
+<p>	</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/13/%E3%80%90%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【前端学习】Echars" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/01/13/%E3%80%90%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91Echars/">【前端学习】Echars</a>
+    </h1>
+  
+
+        
+        <a href="/2024/01/13/%E3%80%90%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91Echars/" class="archive-article-date">
+  	<time datetime="2024-01-13T04:34:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Echars"><a href="#Echars" class="headerlink" title="Echars"></a>Echars</h1><p>​	</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2024/01/13/%E3%80%90%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91Echars/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-【随笔】放假第一天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -733,143 +1010,10 @@
 
 
   
-    <article id="post-My-New-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/09/25/My-New-Post/">My New Post</a>
-    </h1>
-  
-
-        
-        <a href="/2023/09/25/My-New-Post/" class="archive-article-date">
-  	<time datetime="2023-09-25T04:23:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/09/25/My-New-Post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/09/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2023/09/25/hello-world/" class="archive-article-date">
-  	<time datetime="2023-09-25T02:56:22.306Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="这里这里-Hello-王灿"><a href="#这里这里-Hello-王灿" class="headerlink" title="这里这里 Hello 王灿"></a>这里这里 Hello 王灿</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/09/25/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 

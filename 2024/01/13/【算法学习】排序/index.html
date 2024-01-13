@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://RoATH-C.github.io.git">
-  <title>Archives: 2024 | RoATH的个人博客</title>
+  <title>【算法学习】排序 | RoATH的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="RoATH的个人博客">
-<meta property="og:url" content="https://roath-c.github.io.git/archives/2024/index.html">
+  <meta name="description" content="排序内容大总结​	当然在学习之前，我们家进行了一次小聚餐，我聊了聊在学校的生活，并问到我是否和晶晶经常吃饭，以及爸爸妈妈给我说，哪张照片拍的好看，爸爸妈妈总是八卦晶晶的一些事，每每回答道，却总有些空落落，晶晶没有却没有和我一起吃饭，但今天也是再为之后的见面，积攒更深的思念吧。 堆排序​	堆排序是由二叉树所成，排序之前调整为大根堆小根堆 12345678public static void heap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【算法学习】排序">
+<meta property="og:url" content="https://roath-c.github.io.git/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="RoATH的个人博客">
+<meta property="og:description" content="排序内容大总结​	当然在学习之前，我们家进行了一次小聚餐，我聊了聊在学校的生活，并问到我是否和晶晶经常吃饭，以及爸爸妈妈给我说，哪张照片拍的好看，爸爸妈妈总是八卦晶晶的一些事，每每回答道，却总有些空落落，晶晶没有却没有和我一起吃饭，但今天也是再为之后的见面，积攒更深的思念吧。 堆排序​	堆排序是由二叉树所成，排序之前调整为大根堆小根堆 12345678public static void heap">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-01-13T12:41:48.000Z">
+<meta property="article:modified_time" content="2024-01-13T15:26:11.264Z">
 <meta property="article:author" content="RoATH">
 <meta name="twitter:card" content="summary">
   
@@ -154,184 +158,170 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-【算法学习】排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      【算法学习】排序
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+
+        
+        <a href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/" class="archive-article-date">
   	<time datetime="2024-01-13T12:41:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/">【算法学习】排序</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="排序内容大总结"><a href="#排序内容大总结" class="headerlink" title="排序内容大总结"></a>排序内容大总结</h1><p>​	当然在学习之前，我们家进行了一次小聚餐，我聊了聊在学校的生活，并问到我是否和晶晶经常吃饭，以及爸爸妈妈给我说，哪张照片拍的好看，爸爸妈妈总是八卦晶晶的一些事，每每回答道，却总有些空落落，晶晶没有却没有和我一起吃饭，但今天也是再为之后的见面，积攒更深的思念吧。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>​	堆排序是由二叉树所成，排序之前调整为大根堆小根堆</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">heapInsert</span><span class="params">(<span class="type">int</span>[] arr,<span class="type">int</span> index)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(arr[inidex]&gt;arr[(index-<span class="number">1</span>)/<span class="number">2</span>])</span><br><span class="line">    &#123;</span><br><span class="line">        swap(arr,index,(index-<span class="number">1</span>)/<span class="number">2</span>);</span><br><span class="line">        index=(index-<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>此代码段落是实现大根堆的代码。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">heapify</span><span class="params">(<span class="type">int</span>[] arr,<span class="type">int</span> index,<span class="type">int</span> heapSize)</span>&#123;</span><br><span class="line">    <span class="type">int</span> left=index*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;heapSize)&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">largest</span> <span class="operator">=</span> left+<span class="number">1</span>&lt;heapSize&amp;&amp;arr[left+<span class="number">1</span>]&gt;arr[left]?left+<span class="number">1</span>:left;</span><br><span class="line">        largest=arr[largest]&gt;arr[index]?largest:index;</span><br><span class="line">        <span class="keyword">if</span>(largest==index)&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr,largest,index);</span><br><span class="line">        index = largest;</span><br><span class="line">        left=index*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>堆排序： 建立一个大根堆，让下标为0的数与heapSize的数做交换。交换结束，如果下标为0则进行heapify操作。每次交换，heapSize–。代码如下：</p>
+<p>​	</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">heapSort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(arr==<span class="literal">null</span>||arr.length&lt;<span class="number">2</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//把数组内的数都变成大根堆</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        heapInsert(arr,i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> heapSize=arr.length;</span><br><span class="line">    swap(arr,<span class="number">0</span>,--heapSize);</span><br><span class="line">    <span class="keyword">while</span>(heapSize&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        heapify(arr,<span class="number">0</span>,headSize);</span><br><span class="line">        swap(arr,<span class="number">0</span>,--heapSize);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	小根堆在Java里默认为优先级队列，PriorityQueue即优先级队列，在new PriorityQueue 依次弹出数最小的数，每一次代价则是logN级别的时间复杂度。</p>
+<p>​	系统提供的堆结构，需要理解其中原理，必要情况需要自己写堆排序。 </p>
+<h2 id="比较器-Comparator"><a href="#比较器-Comparator" class="headerlink" title="比较器(Comparator)"></a>比较器(Comparator)</h2><p>​	潜台词：返回负数，第一个参数排前面，返回正数第二个参数排前面，返回零无所谓。在Array.sort(需要排序的数组，怎么排序的策略);</p>
+<p>​		</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://roath-c.github.io.git/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E9%93%BE%E8%A1%A8%EF%BC%8C%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E5%93%88%E5%B8%8C%E7%AD%89/" class="archive-article-date">
-  	<time datetime="2024-01-13T12:39:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E9%93%BE%E8%A1%A8%EF%BC%8C%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E5%93%88%E5%B8%8C%E7%AD%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【算法学习】链表，二叉树，哈希等</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/01/13/%E3%80%90%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E3%80%91%E9%93%BE%E8%A1%A8%EF%BC%8C%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%8C%E5%93%88%E5%B8%8C%E7%AD%89/">【算法学习】链表，二叉树，哈希等</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/01/13/%E3%80%90%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2024-01-13T06:09:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/01/13/%E3%80%90%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">【后端学习】计算机网络基础</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/01/13/%E3%80%90%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91Echars/" class="archive-article-date">
-  	<time datetime="2024-01-13T04:34:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/01/13/%E3%80%90%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E3%80%91Echars/">【前端学习】Echars</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/01/12/%E3%80%90%E9%9A%8F%E7%AC%94%E3%80%91%E6%94%BE%E5%81%87%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2024-01-12T15:03:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/01/12/%E3%80%90%E9%9A%8F%E7%AC%94%E3%80%91%E6%94%BE%E5%81%87%E7%AC%AC%E4%B8%80%E5%A4%A9/">【随笔】放假第一天</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2024-01-06T13:46:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/01/06/Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/">Linux系统管理复习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -354,8 +344,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
